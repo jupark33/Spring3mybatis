@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="SqlUserMapper">
+	<select id="selectAll" parameterType="kr.co.spring3study.vo.UserVo" resultType="kr.co.spring3study.vo.UserVo">
+		select * from tbUser
+	</select>
+	
+	<select id="selectIdPwd" parameterType="kr.co.spring3study.vo.UserVo" resultType="kr.co.spring3study.vo.UserVo">
+		select * from tbUser where user_id = #{user_id} and user_pwd = #{user_pwd}
+	</select>
+</mapper>
